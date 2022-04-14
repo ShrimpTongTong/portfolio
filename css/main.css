@@ -4,7 +4,8 @@
 li {list-style: none;}
 a {text-decoration: none; color: #333;}
 html, body {
-    color: #333;    
+    color: #333;
+    min-width: 1280px;    
 }
 
 /* header */
@@ -157,4 +158,314 @@ header div a {
 .best_v .cont .info ul li:nth-child(1) a {
     background-color: royalblue;
     color: #fff;
+}
+
+/* .motion */
+.motion {
+    padding: 100px 0;    
+}
+.motion .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.motion .title h3 {
+    font-size: 45px;    
+}
+.motion .tilte p {
+    font-size: 20px;
+}
+.motion .list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.motion .list li {
+    cursor: pointer;
+    /* 커서 갖다대면 마우스모양이 손모양으로 바뀜 */
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #ccc;
+    padding: 0 30px;
+    margin: 0 5px;
+    box-sizing: border-box;
+    /* li.on 시켰을때(클릭) 박스 사이즈가 달라지지 않게 하기 위함 */
+}
+.motion .list li.on {
+    box-shadow: 2px 3px 15px rgba(220, 20, 60, 0.63);
+    /* 그림자 가로, 세로, 퍼짐 정도, 색상 */
+    background-color: crimson;
+    color: #fff;
+    border: 0;
+
+}
+.motion .motion_cont .list_cont {
+    width: 1280px;
+    margin: 0 auto;
+    /* display: flex; */
+    display: none;
+    /* 메뉴부분만 남고 컨텐츠 부분은 없어짐.
+    jquary로 클릭하면 디스플레이 되게 만들어줄거임 */
+    justify-content: space-between;    
+}
+.motion .motion_cont .list_cont.on {
+    display: flex;
+}
+
+.motion .motion_cont .list_cont .items {
+    width: 49%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* 유튜브 영상 크기 조절 */
+.youtube {
+    width: 100%;
+}
+.youtube .youtube_in {
+    width: 100%;
+    padding-bottom: 56.25%;    
+    /* 화면비율 16:9 로 맞춰주는 공식 */
+    position: relative;
+}
+.youtube .youtube_in iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* 포지션 앱솔루트는 위의 포지션 랠러티브에 맞춰서 가로세로 맞춰주는 태그 */
+    top: 0;
+    left: 0;
+    /* 포지션 렐러티브 상단과 왼쪽에 붙여주는 것 */
+}
+
+.motion .list_cont .items .info {
+    padding: 30px;    
+}
+.motion .list_cont .items .info h4 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.motion .list_cont .items .info dl {
+    display: flex;
+    margin-top: 10px;
+}
+.motion .list_cont .items .info dl dt {
+    width: 20%;
+    font-weight: bold;
+}
+.motion .list_cont .items .info dl dd:hover {
+    /* dd(여기선 유튜브 링크)에 마우스 올렸을때 효과를 넣어주겠다-는 의미 */
+    text-decoration: underline;
+}
+.motion .list_cont .items .info dl dd a:hover {
+    color:cornflowerblue;
+}
+
+/* .g_ver05 */
+.g_ver05 {
+    background-color: #eee;
+    padding: 100px 0;
+}
+.g_ver05 .title {
+    text-align: center;
+    width: 1280px;
+    margin: 0 auto;
+}
+.g_ver05 .title h3 {
+    font-size: 45px;
+}
+.g_ver05 .title p {
+    font-size: 20px;
+}
+.g_ver05 .cont {
+    width: 1280px;    
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.g_ver05 .cont .items {
+    width: 49%;
+    background-color: #fff;
+    display: flex;
+
+    align-items: center;
+    padding: 20px;    
+    /* align-items: flex-end; */
+    /* 한줄일 떄 수직정렬 : 가운데 */
+}
+.g_ver05 .cont .items figure {
+    width: 60%;
+    height: 500px;        
+}
+.g_ver05 .cont .items figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px;
+}
+.g_ver05 .cont .items .info {
+    width: 40%;
+    padding-left: 20px;
+    display: block;
+    box-sizing: border-box;
+    /* width 값이 피겨와 인포 합치면 100%이기 때문에,
+    내부여백 잡을때 여백을 포함해서 가로값이 잡히도록
+    box-sizing: border-box 설정을 해주는 것! */
+}
+.g_ver05 .cont .items .info p {
+    font-size: 14px;
+}
+.g_ver05 .cont .items .info h4 {
+    font-size: 30px;
+}
+.g_ver05 .title em {
+    font-size: 13px;
+    text-align: right;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+.g_ver02 {    
+    background: url('images/popol_3.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+.g_ver02 .title {
+    text-align: center;
+    color: #333;
+    width: 1280px;
+    margin: 0 auto;
+}
+.g_ver02 .title h3 {
+    font-size: 45px;
+}
+.g_ver02 .title p {
+    font-size: 20px;
+}
+.g_ver02 .title em {
+    font-size: 13px;
+    text-align: right;
+    /* background-color: rgb(1, 89, 89); */
+    display: block; 
+    margin: 40px 0 10px;               
+}
+
+.g_ver02 .cont {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;            
+}
+.g_ver02 .cont .items {
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+}
+.g_ver02 .cont .items figure {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.g_ver02 .cont .items figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.8s;
+}
+.g_ver02 .cont .items .info {
+    padding: 20px;
+}
+.g_ver02 .cont .items .info p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.g_ver02 .cont .items .info h4 {
+    font-size: 20px;
+}
+.g_ver02 .cont .items:hover figure img {
+    transform: scale(1.5);
+}
+
+/* .about */
+.about {
+    padding: 100px;
+}
+.about .cont {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .cont figure {
+    width: 30%;
+    height: 500px;
+}
+.about .cont figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about .cont .info {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about .cont .info div {
+    width: 45%;    
+    margin-top: 10px;
+}
+.about .cont .info h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.about .cont .info div dd {
+    font-size: 20px;
+  
+}
+.about .cont .info div dt {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.about .cont .info div p {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    color: aliceblue;
+    padding: 100px 0;
+}
+footer ul li {
+    width: 250px;
+    height: 50px;
+    align-items: center;
+    line-height: 50px;
+    color: aliceblue;
+    border: 3px solid #eee;
+    border-radius: 50px;
+    margin: 10px auto;
+}
+footer ul li a {
+    color: aliceblue;
+}
+footer ul li:first-child {
+    background-color: royalblue;
+    font-weight: bold;
+}
+footer ul li:first-child a {
+    color: #eee;    
+}
+footer h3 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(238, 238, 238, 0.795);
 }
