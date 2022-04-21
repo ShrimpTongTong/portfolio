@@ -16,7 +16,7 @@ a {text-decoration: none; color: #343a40;}
 html, body {
     color: #343a40;
     /* min-width: 1280px;  */
-    /* 최소 화면 사이즈. */
+    /* 최소 화면 사이즈. 반응형 작업땐 꺼주기 */
     background-color: #343a40;   
 }
 
@@ -365,7 +365,6 @@ header .list li.on {
     width: 49%;
     background-color: #fff;
     display: flex;
-
     align-items: center;
     padding: 20px;    
     /* align-items: flex-end; */
@@ -574,7 +573,12 @@ footer p {
 /* 미디어 쿼리 */
 @media screen and (max-width: 1280px) {
     /* 브라우저 너비 1280px 이하일 때 스타일 */
-    header div {width: 100%;}
+    header div {
+        width: 100%;     
+    }
+    header .list {
+        flex-wrap: wrap;
+    }    
     .main_visual .title {width: 100%;}
     .best_v .cont {width: 100%;}
     .motion .motion_cont .list_cont {width: 100%;}
@@ -586,6 +590,28 @@ footer p {
 } /* 해상도 1280px 이하 */
 
 @media screen and (max-width: 960px) {
+    header {
+        height: auto; 
+        line-height: 1.5;
+    }
+    header div {
+        flex-wrap: wrap;
+    }
+    header div h1 a {
+        font-size: 35px;        
+    }
+    header div .list {
+        font-size: 15px;
+        padding: 20px;
+        height: 20px;
+        line-height: 20px;
+        justify-content: space-between;
+    }
+    header div > a {
+        width: 100%;
+        text-align: right;
+        margin-right: 10px;
+    }
     .best_v .cont {flex-wrap: wrap;}
     .best_v .cont .youtube {width: 100%;}
     .best_v .cont .info {
