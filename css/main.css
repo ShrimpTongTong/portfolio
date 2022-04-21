@@ -619,6 +619,14 @@ footer p {
         margin: 0 auto;
         margin-bottom: 20px;
     }
+    .g_ver02 .cont {
+        flex-wrap: wrap;        
+    }
+    .g_ver02 .cont .items {
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
     .about .cont {
         flex-wrap: wrap;
     }
@@ -631,3 +639,43 @@ footer p {
         overflow-x : hidden;
     }
 } /* 해상도 960px 이하 */
+
+@media screen and (max-width: 640px) {
+    section .title h3 {
+        font-size: 30px !important;
+    }
+    section .tilte p {
+        font-size: 16px !important
+    }
+    section .info h4 {
+        font-size: 22px !important;
+    }
+    .main_visual .title h2 {
+        font-size: 85px !important;
+    }
+    .main_visual .title p {
+        font-size: 25px !important;
+    }
+    .motion .list_cont .items .info {
+        padding: 15px;
+    }
+    .motion .list_cont .items .info dl dt {
+        width: 30%;
+    }
+    .motion .list_cont .items .info dl dd {
+        width: 70%;
+        word-break: break-all;
+        /* '글자별' 줄바꿈 해주기 */
+    }
+    .g_ver05 .cont .items figure {
+        height: 300px;
+    }
+    .g_ver02 .cont .items figure {
+        height: 300px;
+    }
+    .about .cont .info h4 {margin-bottom: 10px;}
+    .about .cont .info div p {font-size: 16px;}
+    .about .cont .info div dt {font-size: 16px;}
+    .about .cont .info div dd {font-size: 16px;}   
+}
+/* 해상도 640px 이하 */
