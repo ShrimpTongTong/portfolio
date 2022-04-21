@@ -1,87 +1,37 @@
 @charset "utf-8";
 
-@font-face {
-    font-family: 'paybooc-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'swagger';
-    src: url('../font/SDSwaggerTTF.woff') format('truetype');
-}
 * {margin: 0; padding: 0;}
 li {list-style: none;}
-a {text-decoration: none; color: #343a40;}
+a {text-decoration: none; color: #333;}
 html, body {
-    color: #343a40;
-    min-width: 1280px; 
-    background-color: #343a40;   
+    color: #333;
+    min-width: 1280px;
 }
 
 /* header */
 header {
     height: 80px;
     line-height: 80px;
-    font-family: 'swagger';
-    color: #E1E8EB;
-    background-color: #343A40;
 }
 header div {
-    width: 1440px;
+    width: 1280px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    font-family: 'swagger';
-    color: #E1E8EB;
 }
 header div h1 a {
-    font-size: 45px;
-    font-family: 'swagger';
-    color: #E1E8EB;
+    font-size: 25px;
 }
 header div a {
-    font-size: 25px;
-    font-family: 'swagger';
-    color: #E1E8EB;
-}
-header div .list {
-    display: flex;
-    justify-content: center;
-    /* margin-bottom: 20px; */
-    font-family: 'swagger';
-}
-header div .list li {
-    cursor: pointer;
-    /* 커서 갖다대면 마우스모양이 손모양으로 바뀜 */
-    /* height: 40px; */
-    /* line-height: 40px; */
-    /* border: 1px solid #ccc; */
-    padding: 0 30px;
-    margin: 0 15px;
-    font-size: 25px;
-    box-sizing: border-box;
-    /* li.on 시켰을때(클릭) 박스 사이즈가 달라지지 않게 하기 위함 */
-    font-family: 'swagger';
-}
-header .list li.on {
-    box-shadow: 2px 3px 15px #7142b8;
-    /* 그림자 가로, 세로, 퍼짐 정도, 색상 */
-    background-color: #7952B3;
-    color: #E1E8EB;
-    border: 0;
-    font-family: 'swagger';
+    font-size: 20px;
 }
 
 /* .main_visual */
 .main_visual {
-    width: 100%;
-    /* height: 100vh; */
+    width: 100%; 
     height: calc(100vh - 80px);
-    /* 높이 : 브라우저 전체 높이 -(마이너스) 헤더값 */
+    /* 높이 : 브라우저전체높이 - 헤더값 */
     position: relative;
-    /* 축 설정. 이 축을 기준으로 
-    포지션 앱솔루트가 움직일 수 있음 */
 }
 .main_visual figure {
     width: 100%;
@@ -93,90 +43,73 @@ header .list li.on {
     object-fit: cover;
 }
 .main_visual .title {
-    width: 1280px;
+    width: 1280px; 
     height: 100%;
     position: absolute;
-    /* 단, 포지션 앱솔루트 먹인 후에는
-    margin : 0 auto 안먹힘 */
     left: 50%;
-    /* 그래서 축 방향(렐러티브)의 만 만큼 이동시킨 후 */
     top: 0;
     transform: translateX(-50%);
-    /* 본인이 가지고 있는 영역(넓이)의 반 만큼
-    이동 */
-    /* transform : 변형.
-    transform: franslateX 본인이 가진 넓이를
-    기준으로 이동 */
-    color: #E1E8EB;
-    /* background-color: aqua; */
+    /* 변형 : 이동x축 -> 본인이 가진 너비의 반만큼 역으로 이동 */
 
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    /* 컨텐츠가 일렬로 나열되어 있을때 */
-
-    font-family: 'swagger';
 }
 .main_visual .title h2 {
     width: 100%;
-    font-size: 120px;
-    font-family: 'swagger';
+    font-size: 60px;
 }
 .main_visual .title p {
     width: 100%;
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 40px;
-    font-family: 'swagger';
 }
 .main_visual .title a {
-    color: #E1E8EB;
+    color: #fff;
     width: 150px;
     height: 50px;
     line-height: 50px;
-    background-color: #7952B3;
+    background-color: royalblue;
     text-align: center;
-    border-radius: 0 20px 0 20px;
-    font-family: 'swagger';
-    font-size: 30px;
 }
 
 /* .best_v */
 .best_v {
+    /* background: url('../images/파일명.확장자명') ; */
     padding: 100px 0;
 }
 .best_v .title {
     text-align: center;
     margin-bottom: 40px;
-    font-family: 'swagger';
-    color: #E1E8EB;
-    
 }
 .best_v .title h3 {
     font-size: 40px;
-    font-family: 'swagger';
-    color: #E1E8EB;
 }
 .best_v .title p {
     font-size: 20px;
-    font-family: 'swagger';
-    color: #E1E8EB;
 }
 .best_v .cont {
     width: 1280px;
-    background-color: rgb(241, 241, 241);
     margin: 0 auto;
-    display: flex;   
+    display: flex;
     justify-content: space-between;
-    align-items: center;  
-    font-family: 'swagger';  
+    align-items: center;
+    /* 
+    가로 : 1280px
+    1280을 화면 가운데 배치
+    유튜브, info 가로로 나열
+    양끝에 붙여서 정렬
+    수직가운데 정렬
+    */
 }
 .best_v .cont .youtube {
-    width: 50%;    
+    width: 50%;
 }
 .best_v .cont .youtube .youtube_in {
     width: 100%;
     padding-bottom: 56.25%;
-    /* 화면비율 16:9로  */
+    /* 화면비율 16:9 */
     position: relative;
 }
 .best_v .cont .youtube .youtube_in iframe {
@@ -192,21 +125,18 @@ header .list li.on {
 .best_v .cont .info h4 {
     font-size: 30px;
     margin-bottom: 5px;
-    font-family: 'swagger';
 }
 .best_v .cont .info p:nth-of-type(2) {
-    margin : 20px 0 40px;
-    font-family: 'swagger';
+    /* 외부여백 위20px 아래 40px */
+    margin: 20px 0 40px;
 }
 .best_v .cont .info dl {
     display: flex;
-    margin-bottom:  10px;
-    font-family: 'swagger';
+    margin-bottom: 10px;
 }
 .best_v .cont .info dl dt {
     font-weight: bold;
     width: 100px;
-    font-family: 'swagger';
 }
 .best_v .cont .info ul {
     display: flex;
@@ -216,10 +146,12 @@ header .list li.on {
     line-height: 45px;
     border: 1px solid royalblue;
     box-sizing: border-box;
+    /* 테두리 : 1px 직선 색상 */
+    /* 테두리를 포함해서 높이(45px)가 잡힐 수 있도록 설정
+     */
     display: block;
     padding: 0 25px;
     margin-right: 10px;
-    font-family: 'swagger';
 }
 .best_v .cont .info ul li:nth-child(1) a {
     background-color: royalblue;
@@ -229,61 +161,50 @@ header .list li.on {
 /* .motion */
 .motion {
     padding: 100px 0;
-    background-color: #fff; 
 }
 .motion .title {
     text-align: center;
     margin-bottom: 40px;
-    font-family: 'swagger';    
 }
 .motion .title h3 {
-    font-size: 45px;    
-    font-family: 'swagger';
+    font-size: 45px;
 }
-.motion .tilte p {
+.motion .title p {
     font-size: 20px;
-    font-family: 'swagger';
 }
 .motion .list {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    font-family: 'swagger';
 }
 .motion .list li {
     cursor: pointer;
-    /* 커서 갖다대면 마우스모양이 손모양으로 바뀜 */
+    /* 마우스모양 : 손모양 */
+
     height: 45px;
     line-height: 45px;
-    border: 1px solid #E1E8EB;
+    border: 1px solid #ccc;
     padding: 0 30px;
     margin: 0 5px;
     box-sizing: border-box;
-    /* li.on 시켰을때(클릭) 박스 사이즈가 달라지지 않게 하기 위함 */
-    font-family: 'swagger';
 }
 .motion .list li.on {
-    box-shadow: 2px 3px 15px #7142b8;
-    /* 그림자 가로, 세로, 퍼짐 정도, 색상 */
-    background-color: #7952B3;
-    color: #E1E8EB;
+    box-shadow: 2px 3px 15px rgba(255, 0, 0, 0.4);
+    /* 그림자 : x축 y축 블러 색상 */
+    background-color: rgb(255, 50, 50);
+    color: #fff;
     border: 0;
-    font-family: 'swagger';
-
 }
 .motion .motion_cont .list_cont {
     width: 1280px;
     margin: 0 auto;
     /* display: flex; */
-    display: none;
-    /* 메뉴부분만 남고 컨텐츠 부분은 없어짐.
-    jquary로 클릭하면 디스플레이 되게 만들어줄거임 */
-    justify-content: space-between;    
+    display: none; 
+    justify-content: space-between;
 }
 .motion .motion_cont .list_cont.on {
     display: flex;
 }
-
 .motion .motion_cont .list_cont .items {
     width: 49%;
     border: 1px solid #ccc;
@@ -295,67 +216,67 @@ header .list li.on {
 }
 .youtube .youtube_in {
     width: 100%;
-    padding-bottom: 56.25%;    
-    /* 화면비율 16:9 로 맞춰주는 공식 */
+    padding-bottom: 56.25%;
+    /* 화면비율 16:9 비율 */
     position: relative;
 }
 .youtube .youtube_in iframe {
     width: 100%;
     height: 100%;
     position: absolute;
-    /* 포지션 앱솔루트는 위의 포지션 랠러티브에 맞춰서 가로세로 맞춰주는 태그 */
     top: 0;
     left: 0;
-    /* 포지션 렐러티브 상단과 왼쪽에 붙여주는 것 */
 }
 
 .motion .list_cont .items .info {
-    padding: 30px;    
+    padding: 30px;
 }
 .motion .list_cont .items .info h4 {
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 20px;
-    font-family: 'swagger';
 }
 .motion .list_cont .items .info dl {
     display: flex;
     margin-top: 10px;
-    font-family: 'swagger';
 }
 .motion .list_cont .items .info dl dt {
     width: 20%;
     font-weight: bold;
-    font-family: 'swagger';
 }
-.motion .list_cont .items .info dl dd:hover {
-    /* dd(여기선 유튜브 링크)에 마우스 올렸을때 효과를 넣어주겠다-는 의미 */
+.motion .list_cont .items .info dl dd:hover a {
     text-decoration: underline;
-}
-.motion .list_cont .items .info dl dd a:hover {
-    color:cornflowerblue;
 }
 
 /* .g_ver05 */
 .g_ver05 {
-    background-color: #fff;
+    background-color: #eee;
     padding: 100px 0;
 }
 .g_ver05 .title {
     text-align: center;
     width: 1280px;
     margin: 0 auto;
-    font-family: 'swagger';
 }
 .g_ver05 .title h3 {
     font-size: 45px;
-    font-family: 'swagger';
 }
 .g_ver05 .title p {
     font-size: 20px;
-    font-family: 'swagger';
 }
+.g_ver05 .title em {
+    font-size: 13px;
+    text-align: right;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: block;
+    /* 글자크기 : 13px
+    텍스트 오른쪽 정렬
+    외부여백 위로 40px
+    외부여백 아래로 10px */
+}
+
 .g_ver05 .cont {
-    width: 1280px;    
+    width: 1280px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -364,122 +285,42 @@ header .list li.on {
     width: 49%;
     background-color: #fff;
     display: flex;
-
     align-items: center;
-    padding: 20px;    
-    /* align-items: flex-end; */
-    /* 한줄일 떄 수직정렬 : 가운데 */
+    /* 한줄일 때 수직정렬 : 가운데 */
 }
 .g_ver05 .cont .items figure {
     width: 60%;
-    height: 500px;        
+    height: 500px;
+    /* 가로 : 60%
+    세로 : 500px */
 }
 .g_ver05 .cont .items figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px 20px;
+    /* figure가 가진 가로 세로영역 딱 맞게 넣고 비율에 맞춰 전체 덮이도록 설정 */
 }
 .g_ver05 .cont .items .info {
     width: 40%;
     padding-left: 20px;
-    display: block;
     box-sizing: border-box;
-    /* width 값이 피겨와 인포 합치면 100%이기 때문에,
-    내부여백 잡을때 여백을 포함해서 가로값이 잡히도록
-    box-sizing: border-box 설정을 해주는 것! */
+    /* 가로 : 40% 
+    내부여백-왼쪽 20px;
+    여백을 포함해서 가로값 잡히도록 설정
+    */
 }
 .g_ver05 .cont .items .info p {
+    /* 글자크기 : 14px */
     font-size: 14px;
-    font-family: 'swagger';
 }
 .g_ver05 .cont .items .info h4 {
+    /* 다른컨텐츠에 있는 h4크기와 동일하게 작성 */
     font-size: 30px;
-    font-family: 'swagger';
-}
-.g_ver05 .title em {
-    font-size: 13px;
-    text-align: right;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    display: block;
-    font-family: 'swagger';
-}
-
-
-.g_ver02 {    
-    background: url('../images/popol_1.jpg') center center / cover no-repeat;
-    background-attachment: fixed;
-    padding: 100px 0;
-}
-.g_ver02 .title {
-    text-align: center;
-    color: #eee;
-    width: 1280px;
-    margin: 0 auto;
-    font-family: 'swagger';
-}
-.g_ver02 .title h3 {
-    font-size: 45px;
-    font-family: 'swagger';
-}
-.g_ver02 .title p {
-    font-size: 20px;
-    font-family: 'swagger';
-}
-.g_ver02 .title em {
-    font-size: 13px;
-    text-align: right;
-    /* background-color: rgb(1, 89, 89); */
-    display: block; 
-    margin: 40px 0 10px;   
-    font-family: 'swagger';
-}
-
-.g_ver02 .cont {
-    width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;            
-}
-.g_ver02 .cont .items {
-    width: 40%;
-    background-color: #fff;
-    padding: 20px;
-    font-family: 'swagger';
-}
-.g_ver02 .cont .items figure {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-.g_ver02 .cont .items figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.8s;
-}
-.g_ver02 .cont .items .info {
-    padding: 20px;
-}
-.g_ver02 .cont .items .info p {
-    font-size: 14px;
-    margin-bottom: 15px;
-    font-family: 'swagger';
-}
-.g_ver02 .cont .items .info h4 {
-    font-size: 20px;
-    font-family: 'swagger';
-}
-.g_ver02 .cont .items:hover figure img {
-    transform: scale(1.5);
 }
 
 /* .about */
 .about {
-    padding: 100px;
-    background-color: #7952B3;
-    
+    padding: 100px 0;
 }
 .about .cont {
     width: 1280px;
@@ -487,7 +328,6 @@ header .list li.on {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #E1E8EB;
 }
 .about .cont figure {
     width: 30%;
@@ -505,65 +345,63 @@ header .list li.on {
     justify-content: space-between;
 }
 .about .cont .info div {
-    width: 45%;    
-    margin-top: 30px;
-    font-family: 'swagger';
+    width: 45%;
+    margin: 20px 0;
+    /* background-color: antiquewhite;// */
+
 }
-.about .cont .info h4 {
+.about .cont .info div h4 {
     font-size: 30px;
     margin-bottom: 20px;
-    font-family: 'swagger';
-}
-.about .cont .info div dd {
-    font-size: 20px;
-    font-family: 'swagger';
-}
-.about .cont .info div dt {
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 5px;
-    font-family: 'swagger';
 }
 .about .cont .info div p {
     font-size: 20px;
     margin-bottom: 5px;
-    font-family: 'swagger';
+}
+.about .cont .info div dl dt {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.about .cont .info div dl dd {
+    font-size: 20px;
 }
 
 footer {
-    background-color: #343A40;
+    background-color: #333;
     text-align: center;
-    color: #E1E8EB;
+    color: #fff;
     padding: 100px 0;
-    font-family: 'swagger';
 }
 footer ul li {
-    width: 250px;
+    width: 280px;
     height: 50px;
-    align-items: center;
     line-height: 50px;
-    color: #E1E8EB    ;
-    border: 3px solid #E1E8EB;
+    border: 1px solid #fff;
     border-radius: 50px;
     margin: 10px auto;
-    font-size: 20px;
+    /* 가로 : 220px
+    세로 : 50px
+    글자 수직가운데정렬 
+    테두리 : 1px solid 색상
+    모서리곡선 : 50px
+    외부여백 :  위아래 10px 좌우 자동 */
 }
-footer ul li a {
-    color: #E1E8EB;
-}
+footer ul li a {color: #fff;}
 footer ul li:first-child {
-    background-color: #FFC107;
-    /* font-weight: bold; */
+    background-color: royalblue;
+    font-weight: bold;
 }
 footer ul li:first-child a {
-    color: #343A40;    
-}
-footer h3 {
-    font-size: 35px;
-    margin-bottom: 20px;
+    /* 글자색상 조절 */
 }
 footer p {
     margin-top: 20px;
-    font-size: 18px;
-    color: #E1E8EB;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.615);
 }
+
+
+
+
+
