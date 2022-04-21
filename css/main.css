@@ -64,11 +64,12 @@ header div .list li {
     box-sizing: border-box;
     /* li.on 시켰을때(클릭) 박스 사이즈가 달라지지 않게 하기 위함 */
     font-family: 'swagger';
+    text-align: center;
 }
 header .list li.on {
-    box-shadow: 2px 3px 15px #7142b8;
+    box-shadow: 1px 2px 5px #cf9d05;
     /* 그림자 가로, 세로, 퍼짐 정도, 색상 */
-    background-color: #7952B3;
+    background-color: #FFC107;
     color: #E1E8EB;
     border: 0;
     font-family: 'swagger';
@@ -190,6 +191,9 @@ header .list li.on {
 .best_v .cont .info {
     width: 45%;
 }
+.best_v .cont .info p {
+    font-family: 'swagger';
+}
 .best_v .cont .info h4 {
     font-size: 30px;
     margin-bottom: 5px;
@@ -215,7 +219,7 @@ header .list li.on {
 .best_v .cont .info ul li a {
     height: 45px;
     line-height: 45px;
-    border: 1px solid royalblue;
+    border: 1px solid #7142b8;
     box-sizing: border-box;
     display: block;
     padding: 0 25px;
@@ -223,7 +227,7 @@ header .list li.on {
     font-family: 'swagger';
 }
 .best_v .cont .info ul li:nth-child(1) a {
-    background-color: royalblue;
+    background-color: #7952B3;
     color: #fff;
 }
 
@@ -237,6 +241,7 @@ header .list li.on {
     margin-bottom: 40px;
     font-family: 'swagger';    
 }
+
 .motion .title h3 {
     font-size: 45px;    
     font-family: 'swagger';
@@ -312,6 +317,10 @@ header .list li.on {
 
 .motion .list_cont .items .info {
     padding: 30px;    
+}
+.motion .list_cont .items .info p {
+    font-family: 'swagger';
+    font-size: 12px;
 }
 .motion .list_cont .items .info h4 {
     font-size: 25px;
@@ -406,7 +415,7 @@ header .list li.on {
     font-family: 'swagger';
 }
 
-
+/* .g_ver02 */
 .g_ver02 {    
     background: url('../images/popol_1.jpg') center center / cover no-repeat;
     background-attachment: fixed;
@@ -577,6 +586,7 @@ footer p {
         width: 100%;     
     }
     header .list {
+        width: 100%;
         flex-wrap: wrap;
     }    
     .main_visual .title {width: 100%;}
@@ -593,24 +603,44 @@ footer p {
     header {
         height: auto; 
         line-height: 1.5;
+        position: relative;
     }
     header div {
         flex-wrap: wrap;
     }
     header div h1 a {
-        font-size: 35px;        
+        font-size: 35px;
+        margin-left: 10px;       
     }
     header div .list {
-        font-size: 15px;
-        padding: 20px;
-        height: 20px;
-        line-height: 20px;
-        justify-content: space-between;
+        font-size: 10px;
+        padding: 10px;
+        /* height: 30px; */
+        line-height: 28px;
+        justify-content: space-between;               
+    }
+    header div .list li {
+        padding: 0 20px;
+        margin: 0 10px;
     }
     header div > a {
+        /* ' > ' 들어가면 */
         width: 100%;
         text-align: right;
         margin-right: 10px;
+        position: absolute;
+        top: 10px;             
+        font-size: 20px;
+        right: 6px;        
+    }
+    .main_visual .title h2 {
+        margin-left: 10px;
+    }
+    .main_visual .title p {
+        margin-left: 10px;
+    }
+    .main_visual .title a {
+        margin-left: 10px;
     }
     .best_v .cont {flex-wrap: wrap;}
     .best_v .cont .youtube {width: 100%;}
@@ -652,9 +682,12 @@ footer p {
         width: 95%;
         margin: 0 auto;
         margin-bottom: 20px;
-    }
+    }    
     .about .cont {
+        /* width: 90%; */
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;       
     }
     .about .cont figure {
         width: 300px;
