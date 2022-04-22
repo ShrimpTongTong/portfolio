@@ -38,8 +38,10 @@ header div {
 }
 header div h1 a {
     font-size: 45px;
+    letter-spacing : 3px;
     font-family: 'swagger';
     color: #E1E8EB;
+    margin-left: 10px;
 }
 header div a {
     font-size: 25px;
@@ -122,12 +124,14 @@ header .list li.on {
 .main_visual .title h2 {
     width: 100%;
     font-size: 120px;
+    letter-spacing: 12px;
     font-family: 'swagger';
 }
 .main_visual .title p {
     width: 100%;
     font-size: 50px;
     margin-bottom: 40px;
+    letter-spacing : 8px;
     font-family: 'swagger';
 }
 .main_visual .title a {
@@ -157,11 +161,13 @@ header .list li.on {
     font-size: 40px;
     font-family: 'swagger';
     color: #E1E8EB;
+    letter-spacing : 3px;
 }
 .best_v .title p {
     font-size: 20px;
     font-family: 'swagger';
     color: #E1E8EB;
+    letter-spacing : 1px;
 }
 .best_v .cont {
     width: 1280px;
@@ -413,6 +419,7 @@ header .list li.on {
     margin-bottom: 10px;
     display: block;
     font-family: 'swagger';
+    margin-right: 10px;
 }
 
 /* .g_ver02 */
@@ -441,8 +448,9 @@ header .list li.on {
     text-align: right;
     /* background-color: rgb(1, 89, 89); */
     display: block; 
-    margin: 40px 0 10px;   
-    font-family: 'swagger';
+    margin: 40px 0 10px;
+    margin-right: 10px;   
+    font-family: 'swagger';    
 }
 
 .g_ver02 .cont {
@@ -486,7 +494,7 @@ header .list li.on {
 
 /* .about */
 .about {
-    padding: 100px;
+    padding: 80px;
     background-color: #7952B3;
     
 }
@@ -496,7 +504,7 @@ header .list li.on {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #E1E8EB;
+    background-color: #FFC107;
 }
 .about .cont figure {
     width: 30%;
@@ -519,22 +527,22 @@ header .list li.on {
     font-family: 'swagger';
 }
 .about .cont .info h4 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 20px;
     font-family: 'swagger';
 }
 .about .cont .info div dd {
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'swagger';
 }
 .about .cont .info div dt {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 5px;
     font-family: 'swagger';
 }
 .about .cont .info div p {
-    font-size: 20px;
+    font-size: 27px;
     margin-bottom: 5px;
     font-family: 'swagger';
 }
@@ -679,20 +687,29 @@ footer p {
         flex-wrap: wrap;        
     }
     .g_ver02 .cont .items {
-        width: 95%;
+        width: 50%;
         margin: 0 auto;
         margin-bottom: 20px;
     }    
-    .about .cont {
-        /* width: 90%; */
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;       
+    .about .cont {        
+        flex-wrap: wrap;        
+        justify-content: space-between;                     
     }
+    .about .cont .info {
+        margin: 0 auto;
+        padding: 20px;
+        width: 85%
+    }
+    .about .cont .info div {
+        width: 50%;
+        margin: 20px 0;
+        align-items: center;
+    } 
     .about .cont figure {
         width: 300px;
         height: 300px;
         margin: 0 auto;
+        margin-top: 20px;
     }
     body {
         overflow-x : hidden;
@@ -732,9 +749,17 @@ footer p {
     .g_ver02 .cont .items figure {
         height: 300px;
     }
-    .about .cont .info h4 {margin-bottom: 10px;}
-    .about .cont .info div p {font-size: 16px;}
-    .about .cont .info div dt {font-size: 16px;}
-    .about .cont .info div dd {font-size: 16px;}   
+    .about .cont .info {
+        margin: 0 auto;
+        padding: 20px;
+        width: 80%
+    }
+    .about .cont .info h4 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .about .cont .info div p {font-size: 12px;}
+    .about .cont .info div dt {font-size: 12px;}
+    .about .cont .info div dd {font-size: 12px;}   
 }
 /* 해상도 640px 이하 */
