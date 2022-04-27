@@ -523,7 +523,7 @@ header div .list li {
 }
 .bg2 .bx-wrapper {
     margin: 0 auto;  
-    max-width: 1280px;
+    max-width: 1280px !important;
 }
 .bg2 .slider_box {    
     height: 605px;

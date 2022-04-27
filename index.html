@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 화면비 100% 일때 가로세로 1:1 설정. 모바일 반응형으로 만들때 깨지지 않도록 -->
+    <title>leeheonseong Portfolio</title>
+    <!-- CSS 연결 -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="../portfolio/css/normalize.css"> -->
+    <link rel="stylesheet" href="../portfolio/css/fullpage.min.css">
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- 제이쿼리 js -->
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <!-- Jquary 메뉴 고정해서 이동 -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            $('header div .list li').click(function(){
+                $('header div .list li').removeClass('on');
+                $(this).addClass('on');
+
+            });
+        }); //jquery end
+    </script>
+    <script>
+        $(function(){
+            // jquary에서는 '//' 이 주석
+            // 탭메뉴 만들기 (클릭하면 작동)
+            $('.motion ul li').click(function(){
+                $('.motion ul li').removeClass('on');
+                $(this).addClass('on');
+                $('.motion .list_cont').removeClass('on');
+                $('.motion .list_cont').eq($(this).index()).addClass('on');
+                // eq($(this) 는 $().motion ul li). 클릭한 li의 순서를 불러오겠다는 의미
+            }); //click end
+        });
+    </script>
+    <!-- FancyBox css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FancyBox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../portfolio/js/jquery-3.6.0.min.js"></script>
+    <script src="../portfolio/js/fullpage.min.js"></script>
+    <script src="../portfolio/js/jquery.bxslider.min.js"></script>
+    <script>
+        /*fullpage 스크립트 + 앵커 스크립트*/
+        $(document).ready(function () {
+            $("#fullpage").fullpage({
+                anchors: ["best", "video", "motion", "paint", "contact"],
+                menu: "#topMenu",
+                //navigation: true,
+                //scrollBar: true,
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                auto: true,
+                minSlides: 1,
+                maxSlides: 3,
+                moveSlides: 1,
+                slideWidth: 380,
+                touchEnabled: (navigator.maxTouchPoints > 0) 
+                //bxslider 내부의 a 링크 활성화
+            });
+        });
+    </script>
+    
+    <script>
+        $(function(){
+            // jquary에서는 '//' 이 주석
+            // 탭메뉴 만들기 (클릭하면 작동)
+            $('.motion ul li').click(function(){
+                $('.motion ul li').removeClass('on');
+                $(this).addClass('on');
+                $('.motion .list_cont').removeClass('on');
+                $('.motion .list_cont').eq($(this).index()).addClass('on');
+                // eq($(this) 는 $().motion ul li). 클릭한 li의 순서를 불러오겠다는 의미
+            }); //click end            
+        });    
+    </script>
+     <script>
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                minSlides: 1,
+                maxSlides: 3,
+                moveSlides: 1,
+                slideWidth: 380,
+                touchEnabled: (navigator.maxTouchPoints > 0) 
+                //bxslider 내부의 a 링크 활성화
+            });
+        });
+    </script>   
+
+
+    <!-- FancyBox css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FancyBox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+   
+</head>
+<body>
+<!-- best video motion paint contact -->
+
+    <header>
+        <div>
+            <h1>
+                <a href="#">leeheonseong</a>
+            </h1>
+            <ul class="list">
+                <li class="on"><a href="#best">BEST</a></li>
+                <!-- 링크 걸기 : 헤더의 아이콘 클릭하면 해당 섹션으로 바로 이동하도록
+                              링크 걸어주기. a 태그 활용. <a href="id">  </a>
+                 -->
+                <li data-menuanchor="motion"><a href="#video">VIDEO EDITING</a></li>
+                <li data-menuanchor="motion"><a href="#motion">MOTION GRAPHICS</a></li>
+                <li data-menuanchor="paint"><a href="#paint">ILLUST</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul><!-- .list end --> 
+            <a href="#" download>resume</a>
+        </div>
+       
+    </header>
+    <section class="main_visual" id="topmenu">
+            <figure>
+                <img src="../portfolio/images/Banner_2.jpg" />
+            </figure>
+            <div class="title">
+                <h2>MULTI GRAPHIC DESIGNER</h2>
+                <p>lee heon seong</p>
+                <a href="#">유튜브채널</a>
+            </div> <!-- .title end -->
+    </section> <!-- .main_visual end -->
+    <section class="best_v" id="best">
+            <!-- 링크 걸기 : 헤더에 a 태그로 <a href="#id">  </a> 잡아준 
+               "#id"를 Class 꺾쇠 안에 지정해 주는 것. id="#" 으로 지정   -->
+        <div class="title">
+            <h3>BEST VIDEO EDITNG</h3>
+            <p>내가 뽑은 베스트 작품</p>
+        </div> <!-- .title end -->
+        <div class="cont">
+            <div class="youtube">
+                <div class="youtube_in">
+                    <!-- 유튜브 연결 -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IDD5_z3kKCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div> <!-- .youtube_in -->
+            </div> <!-- .youtube end -->
+            <div class="info">
+                <strong>#브이로그</strong>
+                <h4>영상제목</h4>
+                <p>편집, 촬영, 연출, 디자인, 특수효과 / 모작</p>
+                <p>제작목적, 콘셉트 </p>
+                <dl>
+                    <dt>프로그램</dt>
+                    <dd>Adobe After Effect, Premiere</dd>
+                </dl>
+                <dl>
+                    <dt>BGM</dt>
+                    <dd> Nell - Black </dd>
+                </dl>                
+                <dl>
+                    <dt>러닝타임</dt>
+                    <dd>00:18:00</dd>
+                </dl>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">유튜브로 이동</a>               
+                        <!-- _blank : 새탭에서 열기 -->
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">기획서 보기</a>
+                    </li>
+                </ul>
+            </div> <!-- .info end -->
+        </div> <!-- .cont end -->
+    </section> <!-- .best_v end -->
+
+
+    <section class="video">
+        <div class="title" id="video">
+            <h3>VIDEO EDITTING</h3>
+            <p>비디오, 애니메이션 기술을 이용한 영상제작</p>
+        </div><!-- .title end -->
+        <ul class="list">
+            <li class="on">촬영/편집</li>
+            <li>게임</li>
+            <li>인포그래픽</li>
+            <li>V-LOG</li>
+            <li>영화 타이틀시퀀스</li>
+        </ul><!-- .list end --> 
+        <div class="video_cont"> <!-- 촬영/편집 -->
+            <div class="list_cont on">
+                <div class="items">
+                    <div class="youtube">
+                        <div class="youtube_in">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yxsU-bvDfN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- 유튜브에서 공유 → 퍼가기 눌러서 아이프레임 태그 가지고 와야함 -->
+                        </div> <!-- .youtube_in end -->
+                    </div> <!-- .youtube end -->
+                    <div class="info">
+                        <p> 스토리보드, 연출, 촬영, 편집, 보정, 특수효과</p>
+                        <h4>Canon 브랜드 광고컨셉 영상제작</h4>
+                        <dl>
+                            <dt>프로그램</dt>
+                            <dd>Adobe After Effect, illustrator</dd>
+                        </dl>
+                        <dl>
+                            <dt>러닝타임</dt>
+                            <dd>00:08:03</dd>
+                        </dl>
+                        <dl>
+                            <dt>BGM</dt>
+                            <dd>Colyplay - fix you</dd>
+                        </dl>
+                        <dl>
+                            <dt>URL주소</dt>
+                            <dd><a href="https://www.youtube.com/watch?v=yxsU-bvDfN8">영상보기</a></dd>
+                        </dl>
+                    </div> <!-- .info end -->
+                </div> <!-- .itmes end 1 -->
+                <div class="items">
+                    <div class="youtube">
+                        <div class="youtube_in">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/aCcicY_lm24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- 유튜브에서 공유 → 퍼가기 눌러서 아이프레임 태그 가지고 와야함 -->
+                        </div> <!-- .youtube_in end -->
+                    </div> <!-- .youtube end -->
+                    <div class="info">
+                        <p> 스토리보드, 연출, 촬영, 편집, 보정, 특수효과</p>
+                        <h4>핸드드립 영상제작</h4>
+                        <dl>
+                            <dt>프로그램</dt>
+                            <dd>Adobe After Effect, Photoshop, illustrator</dd>
+                        </dl>
+                        <dl>
+                            <dt>러닝타임</dt>
+                            <dd>00:11:56</dd>
+                        </dl>
+                        <dl>
+                            <dt>BGM</dt>
+                            <dd>Colyplay - fix you</dd>
+                        </dl>
+                        <dl>
+                            <dt>URL주소</dt>
+                            <dd><a href="https://www.youtube.com/watch?v=aCcicY_lm24">영상보기</a></dd>
+                        </dl>
+                    </div> <!-- .info end -->
+                </div> <!-- .itmes end 2 -->
+            </div> <!-- list_cont end 촬영/편집 -->
+            <div class="list_cont">
+                <div class="items">
+                    <div class="youtube">
+                        <div class="youtube_in">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/a1wW6wG7Eb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- 유튜브에서 공유 → 퍼가기 눌러서 아이프레임 태그 가지고 와야함 -->
+                        </div> <!-- .youtube_in end -->
+                    </div> <!-- .youtube end -->
+                    <div class="info">
+                        <p> 스토리보드, 연출, 촬영, 편집, 보정, 특수효과</p>
+                        <h4>게임 스토리 소개 영상</h4>
+                        <dl>
+                            <dt>프로그램</dt>
+                            <dd>Adobe Primiere, After Effect, illustrator</dd>
+                        </dl>
+                        <dl>
+                            <dt>러닝타임</dt>
+                            <dd>00:20:56</dd>
+                        </dl>
+                        <dl>
+                            <dt>BGM</dt>
+                            <dd>Eleden Ring - Radagon</dd>
+                        </dl>
+                        <dl>
+                            <dt>URL주소</dt>
+                            <dd><a href="https://www.youtube.com/watch?v=a1wW6wG7Eb4">영상보기</a></dd>
+                        </dl>
+                    </div> <!-- .info end -->
+                </div> <!-- .itmes end 2 -->
+                <div class="items">
+                    <div class="youtube">
+                        <div class="youtube_in">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/M-PHjpjnJ2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- 유튜브에서 공유 → 퍼가기 눌러서 아이프레임 태그 가지고 와야함 -->
+                        </div> <!-- .youtube_in end -->
+                    </div> <!-- .youtube end -->
+                    <div class="info">
+                        <p> 스토리보드, 연출, 촬영, 편집, 보정, 특수효과</p>
+                        <h4>게임 스토리 소개 영상</h4>
+                        <dl>
+                            <dt>프로그램</dt>
+                            <dd>Adobe After Effect, Photoshop, illustrator</dd>
+                        </dl>
+                        <dl>
+                            <dt>러닝타임</dt>
+                            <dd>00:18:28</dd>
+                        </dl>
+                        <dl>
+                            <dt>BGM</dt>
+                            <dd>Colyplay - fix you</dd>
+                        </dl>
+                        <dl>
+                            <dt>URL주소</dt>
+                            <dd><a href="https://youtu.be/M-PHjpjnJ2Y">영상보기</a></dd>
+                        </dl>
+                    </div> <!-- .info end -->
+                </div> <!-- .itmes end 2  -->
+            </div> <!-- list_cont end 게임 -->
+        </div> <!-- .video_cont end -->
+    </section> <!-- .video end -->
+
+    
+    <section class="motion">
+        <div class="title" id="motion">
+            <h3>MOTION GRAPHICS</h3>
+            <p>비디오, 애니메이션 기술을 이용한 영상제작</p>
+        </div><!-- .title end -->
+        <ul class="list">
+            <li class="on">촬영/편집</li>
+            <li>게임</li>
+            <li>인포그래픽</li>
+            <li>V-LOG</li>
+            <li>영화 타이틀시퀀스</li>
+        </ul><!-- .list end --> 
+        <div class="motion_cont"> <!-- 촬영/편집 -->
+            <div class="list_cont on">
+                <div class="items">
+                    <div class="youtube">
+                        <div class="youtube_in">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yxsU-bvDfN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- 유튜브에서 공유 → 퍼가기 눌러서 아이프레임 태그 가지고 와야함 -->
+                        </div> <!-- .youtube_in end -->
+                    </div> <!-- .youtube end -->
+                    <div class="info">
+                        <p> 스토리보드, 연출, 촬영, 편집, 보정, 특수효과</p>
+                        <h4>Canon 브랜드 광고컨셉 영상제작</h4>
+                        <dl>
+                            <dt>프로그램</dt>
+                            <dd>Adobe After Effect, illustrator</dd>
+                        </dl>
+                        <dl>
+                            <dt>러닝타임</dt>
+                            <dd>00:08:03</dd>
+                        </dl>
+                        <dl>
+                            <dt>BGM</dt>
+                            <dd>Colyplay - fix you</dd>
+                        </dl>
+                        <dl>
+                            <dt>URL주소</dt>
+                            <dd><a href="https://www.youtube.com/watch?v=yxsU-bvDfN8">영상보기</a></dd>
+                        </dl>
+                    </div> <!-- .info end -->
+                </div> <!-- .itmes end 1 -->
+                <div class="items">
+                    <div class="youtube">
+                        <div class="youtube_in">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/aCcicY_lm24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- 유튜브에서 공유 → 퍼가기 눌러서 아이프레임 태그 가지고 와야함 -->
+                        </div> <!-- .youtube_in end -->
+                    </div> <!-- .youtube end -->
+                    <div class="info">
+                        <p> 스토리보드, 연출, 촬영, 편집, 보정, 특수효과</p>
+                        <h4>핸드드립 영상제작</h4>
+                        <dl>
+                            <dt>프로그램</dt>
+                            <dd>Adobe After Effect, Photoshop, illustrator</dd>
+                        </dl>
+                        <dl>
+                            <dt>러닝타임</dt>
+                            <dd>00:11:56</dd>
+                        </dl>
+                        <dl>
+                            <dt>BGM</dt>
+                            <dd>Colyplay - fix you</dd>
+                        </dl>
+                        <dl>
+                            <dt>URL주소</dt>
+                            <dd><a href="https://www.youtube.com/watch?v=aCcicY_lm24">영상보기</a></dd>
+                        </dl>
+                    </div> <!-- .info end -->
+                </div> <!-- .itmes end 2 -->
+            </div> <!-- list_cont end 촬영/편집 -->
+            <div class="list_cont">
+                <div class="items">
+                    <div class="youtube">
+                        <div class="youtube_in">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/a1wW6wG7Eb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- 유튜브에서 공유 → 퍼가기 눌러서 아이프레임 태그 가지고 와야함 -->
+                        </div> <!-- .youtube_in end -->
+                    </div> <!-- .youtube end -->
+                    <div class="info">
+                        <p> 스토리보드, 연출, 촬영, 편집, 보정, 특수효과</p>
+                        <h4>게임 스토리 소개 영상</h4>
+                        <dl>
+                            <dt>프로그램</dt>
+                            <dd>Adobe Primiere, After Effect, illustrator</dd>
+                        </dl>
+                        <dl>
+                            <dt>러닝타임</dt>
+                            <dd>00:20:56</dd>
+                        </dl>
+                        <dl>
+                            <dt>BGM</dt>
+                            <dd>Eleden Ring - Radagon</dd>
+                        </dl>
+                        <dl>
+                            <dt>URL주소</dt>
+                            <dd><a href="https://www.youtube.com/watch?v=a1wW6wG7Eb4">영상보기</a></dd>
+                        </dl>
+                    </div> <!-- .info end -->
+                </div> <!-- .itmes end 2 -->
+                <div class="items">
+                    <div class="youtube">
+                        <div class="youtube_in">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/M-PHjpjnJ2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- 유튜브에서 공유 → 퍼가기 눌러서 아이프레임 태그 가지고 와야함 -->
+                        </div> <!-- .youtube_in end -->
+                    </div> <!-- .youtube end -->
+                    <div class="info">
+                        <p> 스토리보드, 연출, 촬영, 편집, 보정, 특수효과</p>
+                        <h4>게임 스토리 소개 영상</h4>
+                        <dl>
+                            <dt>프로그램</dt>
+                            <dd>Adobe After Effect, Photoshop, illustrator</dd>
+                        </dl>
+                        <dl>
+                            <dt>러닝타임</dt>
+                            <dd>00:18:28</dd>
+                        </dl>
+                        <dl>
+                            <dt>BGM</dt>
+                            <dd>Colyplay - fix you</dd>
+                        </dl>
+                        <dl>
+                            <dt>URL주소</dt>
+                            <dd><a href="https://youtu.be/M-PHjpjnJ2Y">영상보기</a></dd>
+                        </dl>
+                    </div> <!-- .info end -->
+                </div> <!-- .itmes end 2  -->
+            </div> <!-- list_cont end 게임 -->
+        </div> <!-- .motion_cont end -->
+    </section> <!-- .motion end -->
+
+    <div class="bg2" data-anchor="paint">
+        <div class="div1" id="#">   
+            <div class="title">
+                <h3>ILLUSTRATION</h3>
+                <p>디자인 툴을 이용한 그래픽디자인</p>
+            </div>
+            <div class="bxslider">
+                <div class="slider_box">
+                    <a href="http://youtube.com">                       
+                            <img src="../portfolio/images/port01.jpg" alt="">                       
+                    </a>
+                    <div class="slider_txt">
+                        <p>PUBLISHING</p>
+                        <h3>Paint #01</h3>
+                    </div>
+                </div>
+                <div class="slider_box">
+                    <a href="#">                        
+                            <img src="../portfolio/images/port02.jpg" alt="">                        
+                    </a>
+                    <div class="slider_txt">
+                        <p>PUBLISHING</p>
+                        <h3>Paint #02</h3>
+                    </div>
+                </div>
+                <div class="slider_box">
+                    <a href="#">                        
+                            <img src="../portfolio/images/port03.jpg" alt="">                        
+                    </a>
+                    <div class="slider_txt">
+                        <p>PUBLISHING</p>
+                        <h3>Paint #03</h3>
+                    </div>
+                </div>
+                <div class="slider_box">
+                    <a href="#">                        
+                            <img src="../portfolio/images/port04.jpg" alt="">                        
+                    </a>
+                    <div class="slider_txt">
+                        <p>PUBLISHING</p>
+                        <h3>Paint #04</h3>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div> <!-- .bg2 end -->
+
+
+    <section class="g_ver02" id="paint">
+        <div class="title">
+            <h3>GRAPHIC DESIGN</h3>
+            <p>디자인프로그램을 사용하여 만든 그래픽디자인</p>
+            <em>클릭하시면 원본이미지를 보실 수 있습니다.</em>
+        </div><!-- .title end -->
+        <div class="cont">
+            <!-- 팬시박스3 -->
+            <a class="items" href="images/Popol_2.jpg" data-fancybox="images">
+                <figure>
+                    <img src="images/Popol_2.jpg" alt="Scene_1"/>
+                </figure>
+                <div class="info">
+                    <p>#캐릭터디자인 / 일러스트레이터</p>
+                    <h4>카카오톡 이모티콘 디자인</h4>
+                </div><!-- .info end -->
+            </a><!-- .items end 1 -->
+
+            <a class="items" href="images/Popol_2.jpg" data-fancybox="images">
+                <figure>
+                    <img src="images/Popol_2.jpg" alt="Scene_2"/>
+                </figure>
+                <div class="info">
+                    <p>#캐릭터디자인 / 일러스트레이터</p>
+                    <h4>동물 캐릭터디자인</h4>
+                </div><!-- .info end -->
+            </a><!-- .items end 2 -->
+
+            <a class="items" href="images/Popol_2.jpg" data-fancybox="images">
+                <figure>
+                    <img src="images/Popol_2.jpg" alt="Scene_3"/>
+                </figure>
+                <div class="info">
+                    <p>#캐릭터디자인 / 일러스트레이터</p>
+                    <h4>일러스트 모작</h4>
+                </div><!-- .info end -->
+            </a><!-- .items end 3 -->
+
+            <a class="items" href="images/Popol_2.jpg" data-fancybox="images">
+                <figure>
+                    <img src="images/Popol_2.jpg" alt="Scene_4"/>
+                </figure>
+                <div class="info">
+                    <p>#캐릭터디자인 / 일러스트레이터</p>
+                    <h4>캐릭터디자인</h4>
+                </div><!-- .info end -->
+            </a><!-- .items end 4 -->
+
+        </div><!-- .cont end -->
+    </section><!-- .g_ver02 end -->
+
+    <section class="about" id="contact">
+        <div class="title">
+            <h4>CONTACT</h4>
+        </div>
+        <div class="cont" >
+            
+            <figure>
+                <img src="https://via.placeholder.com/450x500/?text=images" alt="#" />
+            </figure>
+            <div class="info">
+                
+                <div>
+                    <h4>PROFILE</h4>
+                    <p>이름</p>
+                    <p>1991.09.05.<p>
+                    <p><a href="tel:010-2961-3078">010.2961.3078</a></p>
+                    <p>부산광역시 동구</p>
+                </div>
+                <div>
+                    <h4>EDUCATION</h4>
+                    <dl>
+                        <dt>2021.12. ~ 2022. 05.</dt>
+                        <dd>그린컴퓨터 아카데미<br />
+                        [멀티미디어콘텐츠제작] 영상편집 수료</dd>
+                    </dl>
+                </div>
+                <div>
+                    <h4>LISENSE</h4>
+                    <dl>
+                        <dt>2000.00.00</dt>
+                        <dd>자격증 이름</dd>
+                    </dl>
+                </div>
+                <div>
+                    <h4>SKILL</h4>
+                    <p>Adobe Premiere, After Effect</p>
+                    <p>Photoshop, illustrator</p>
+                    <p>HTML, CSS</p>
+                </div>
+            </div> <!-- .info end -->
+        </div> <!-- .cont end -->
+    </section> <!-- .about end -->
+
+    <footer>
+        <h3 class="foot"><a href="#topmenu">leeheonseong</a></h3>
+        <ul>
+            <li><a href="#">유튜브채널</a></li>
+            <li><a href="tel:010-2961-3078">010.2961.3078</a></li>
+            <li>kalhs98989@naver.com</li>
+        </ul>
+        <p>copyright 2022. Visual Creater leeheonseong all right reserved.<br />본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다. 사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝힙니다.</p>
+    </footer>
+</body>
+</html>
