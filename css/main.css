@@ -20,13 +20,6 @@ html, body {
     background-color: #343a40;   
 }
 
-/* nav */
-nav {position: absolute; top: 0; width: 100%; z-index: 10; padding-top: 12px;}
-nav a, a:visited {color: #fff;}
-nav ul {height: 62px; line-height: 60px; text-align: center;}
-nav ul img {vertical-align: middle;}
-nav li {display: inline-block; width: 130px; margin: 0 20px;}
-#topMenu > .active a {color: tomato; text-shadow: 1px 1px 2px #000; font-size: larger; font-weight: bold;}
 
 /* header */
 header {
@@ -45,26 +38,26 @@ header div {
     width: 1440px;
     margin: 0 auto;
     display: flex;
+    height: 100%;
     justify-content: space-between;
     font-family: 'swagger';
     color: #E1E8EB;
 }
 header div h1 a {
-    font-size: 45px;
-    letter-spacing : 3px;
+    font-size: 45px;    
     font-family: 'swagger';
     color: #E1E8EB;
     margin-left: 10px;
+    letter-spacing : 4px;    
 }
 header div a {
-    font-size: 25px;
+    font-size: 30px;
     font-family: 'swagger';
     color: #E1E8EB;
 }
 header div .list {
     display: flex;
-    justify-content: center;
-    /* margin-bottom: 20px; */
+    justify-content: center;    
     font-family: 'swagger';
 }
 header div .list li {
@@ -77,17 +70,18 @@ header div .list li {
     margin: 0 15px;
     font-size: 25px;
     box-sizing: border-box;
-    /* li.on 시켰을때(클릭) 박스 사이즈가 달라지지 않게 하기 위함 */
-    font-family: 'swagger';
+    /* li.on 시켰을때(클릭) 박스 사이즈가 달라지지 않게 하기 위함 */    
     text-align: center;
+    letter-spacing : 1px;    
 }
     header .list li.on {
-    box-shadow: px 2px 5px #cf9d05d0;
+    box-shadow: 0px 0px 4px #cf9d05d0;
     /* 그림자 가로, 세로, 퍼짐 정도, 색상 */
     background-color: #FFC107;
     color: #E1E8EB;
-    border: 0;
-    font-family: 'swagger';        
+    border: 0;    
+    font-family: 'swagger';
+    vertical-align: middle;            
 }
 
 /* .main_visual */
@@ -168,7 +162,7 @@ header div .list li {
     margin-bottom: 40px;
     font-family: 'swagger';
     color: #E1E8EB;
-    
+    letter-spacing : 3px;
 }
 .best_v .title h3 {
     font-size: 40px;
@@ -212,11 +206,13 @@ header div .list li {
 }
 .best_v .cont .info p {
     font-family: 'swagger';
+    
 }
 .best_v .cont .info h4 {
     font-size: 30px;
     margin-bottom: 5px;
     font-family: 'swagger';
+    letter-spacing : 1px;
 }
 .best_v .cont .info p:nth-of-type(2) {
     margin : 20px 0 40px;
@@ -225,12 +221,15 @@ header div .list li {
 .best_v .cont .info dl {
     display: flex;
     margin-bottom:  10px;
-    font-family: 'swagger';
+    font-family: 'swagger';    
+    font-size: 20px;
 }
 .best_v .cont .info dl dt {
     font-weight: bold;
     width: 100px;
     font-family: 'swagger';
+    letter-spacing : 1px;
+    font-size: 20px;
 }
 .best_v .cont .info ul {
     display: flex;
@@ -244,16 +243,145 @@ header div .list li {
     padding: 0 25px;
     margin-right: 10px;
     font-family: 'swagger';
+    font-size: 20px;
+    letter-spacing : 1px;
 }
 .best_v .cont .info ul li:nth-child(1) a {
     background-color: #7952B3;
     color: #fff;
 }
 
+/* .video */
+.video {
+    padding: 100px 0;
+    background-color: #fff; 
+}
+.video .title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'swagger';    
+}
+
+.video .title h3 {
+    font-size: 45px;    
+    font-family: 'swagger';
+    letter-spacing : 2px;
+}
+.video .tilte p {
+    font-size: 20px;
+    font-family: 'swagger';
+    letter-spacing : 1px;
+}
+.video .list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-family: 'swagger';
+}
+.video .list li {
+    cursor: pointer;
+    /* 커서 갖다대면 마우스모양이 손모양으로 바뀜 */
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #E1E8EB;
+    padding: 0 30px;
+    margin: 0 5px;
+    box-sizing: border-box;
+    /* li.on 시켰을때(클릭) 박스 사이즈가 달라지지 않게 하기 위함 */
+    font-family: 'swagger';
+    
+    font-size: 20px;
+}
+.video .list li.on {
+    box-shadow: 2px 3px 15px #7142b8;
+    /* 그림자 가로, 세로, 퍼짐 정도, 색상 */
+    background-color: #7952B3;
+    color: #E1E8EB;
+    border: 0;
+    font-family: 'swagger';
+    
+
+}
+.video .video_cont .list_cont {
+    width: 1280px;
+    margin: 0 auto;
+    /* display: flex; */
+    display: none;
+    /* 메뉴부분만 남고 컨텐츠 부분은 없어짐.
+    jquary로 클릭하면 디스플레이 되게 만들어줄거임 */
+    justify-content: space-between;    
+}
+.video .video_cont .list_cont.on {
+    display: flex;
+}
+
+.video .video_cont .list_cont .items {
+    width: 49%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* 유튜브 영상 크기 조절 */
+.youtube {
+    width: 100%;
+}
+.youtube .youtube_in {
+    width: 100%;
+    padding-bottom: 56.25%;    
+    /* 화면비율 16:9 로 맞춰주는 공식 */
+    position: relative;
+}
+.youtube .youtube_in iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* 포지션 앱솔루트는 위의 포지션 랠러티브에 맞춰서 가로세로 맞춰주는 태그 */
+    top: 0;
+    left: 0;
+    /* 포지션 렐러티브 상단과 왼쪽에 붙여주는 것 */
+}
+
+.video .list_cont .items .info {
+    padding: 30px;    
+}
+.video .list_cont .items .info p {
+    font-family: 'swagger';
+    font-size: 12px;
+}
+.video .list_cont .items .info h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'swagger';
+    letter-spacing : 1px;
+}
+.video .list_cont .items .info dl {
+    display: flex;
+    margin-top: 10px;
+    font-family: 'swagger';
+    font-size: 20px;
+    
+}
+.video .list_cont .items .info dl dt {
+    width: 20%;
+    font-weight: bold;
+    font-family: 'swagger';
+    font-size: 20px;
+    letter-spacing : 1px;
+}
+.video .list_cont .items .info dl dd:hover {
+    /* dd(여기선 유튜브 링크)에 마우스 올렸을때 효과를 넣어주겠다-는 의미 */
+    text-decoration: underline;
+}
+.video .list_cont .items .info dl dd a:hover {
+    color:#FFC107;
+}
+/* .video end */
+
+
 /* .motion */
 .motion {
     padding: 100px 0;
-    background-color: #fff; 
+    background-color: #343a40;
+    color: #E1E8EB; 
 }
 .motion .title {
     text-align: center;
@@ -264,6 +392,7 @@ header div .list li {
 .motion .title h3 {
     font-size: 45px;    
     font-family: 'swagger';
+    letter-spacing : 2px;
 }
 .motion .tilte p {
     font-size: 20px;
@@ -280,7 +409,7 @@ header div .list li {
     /* 커서 갖다대면 마우스모양이 손모양으로 바뀜 */
     height: 45px;
     line-height: 45px;
-    border: 1px solid #E1E8EB;
+    /* border: 1px solid #E1E8EB; */
     padding: 0 30px;
     margin: 0 5px;
     box-sizing: border-box;
@@ -308,10 +437,9 @@ header div .list li {
 .motion .motion_cont .list_cont.on {
     display: flex;
 }
-
 .motion .motion_cont .list_cont .items {
     width: 49%;
-    border: 1px solid #ccc;
+    /* border: 3px solid #ccc; */
     box-sizing: border-box;
 }
 /* 유튜브 영상 크기 조절 */
@@ -342,19 +470,25 @@ header div .list li {
     font-size: 12px;
 }
 .motion .list_cont .items .info h4 {
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 20px;
     font-family: 'swagger';
+    letter-spacing : 1px;
 }
 .motion .list_cont .items .info dl {
     display: flex;
     margin-top: 10px;
     font-family: 'swagger';
+    font-size: 20px;
 }
 .motion .list_cont .items .info dl dt {
     width: 20%;
     font-weight: bold;
-    font-family: 'swagger';
+    font-family: 'swagger';  
+    letter-spacing : 1px;
+}
+.motion .list_cont .items .info dl dd a{
+    color: #E1E8EB; 
 }
 .motion .list_cont .items .info dl dd:hover {
     /* dd(여기선 유튜브 링크)에 마우스 올렸을때 효과를 넣어주겠다-는 의미 */
@@ -363,56 +497,78 @@ header div .list li {
 .motion .list_cont .items .info dl dd a:hover {
     color:#FFC107;
 }
+/* .motion end */
 
 /* .bg2 */
 .bg2 .div1 {
-    width: 100%;
+    width: 100%;  
+    /* background-color: #fff; */
+    padding: 100px 0;
+    text-align: center;       
 }
-.bg2 h2 {
-    margin-bottom: 25px;
+.bg2 .title {
+    margin-bottom: 45px;
+}
+.bg2 .title h3 {    
     color:#E1E8EB;
     font-size: 45px;
-    font-family: 'swagger';    
+    font-family: 'swagger';
+    letter-spacing : 2px;        
 }
-.bg2 .slider_box {
+.bg2 .title p {
+    font-size: 20px;
+    color:#E1E8EB;
+    font-family: 'swagger';
+    letter-spacing : 1px;    
+}
+.bg2 .bx-wrapper {
+    margin: 0 auto;  
+    max-width: 1280px;
+}
+.bg2 .slider_box {    
     height: 605px;
-    margin: 0 20px;
+    margin: 0 20px;    
 }
 .bg2 .slider_box a {
     display: block;
+    width: 100px;
 }
-.bg2 .slider_box figure {
-    padding: 15px 15px;
-    margin: 0px auto;
-    width: 60%;
-    height: 450px; 
-}
-.bg2 .slider_box figure img {  
+.bg2 .slider_box img {  
     object-fit: cover;
+    margin: 0 10px;
+    height: 100%;
     transition: 0.8s;    
 }
-
+.bg2 .slider_txt {
+    position: relative;
+    left: 10px;
+}
 .bg2 .slider_box .slider_txt p {
-    font-size: 0.85em; padding-top: 5px;
+    font-size: 15px;
+    padding-top: 5px;
     color:#E1E8EB;
     font-family: 'swagger';
-}
-    
-.bg2 .slider_box .slider_txt h3 
-    {font-size: 1.6em; 
+    letter-spacing : 1px; 
+}    
+.bg2 .slider_box .slider_txt h3 {
+    font-size: 35px; 
     margin-top: 8px;
     color:#E1E8EB;
     font-family: 'swagger';
+    letter-spacing : 2px; 
+}
+.bg2 .bx-controls {
+    margin-top: 10px;
 }    
 .bg2 .bx-controls-direction {
-    /* position: absolute;  */
+    position: absolute; 
     /* top: 50%;  */
     width: 1280px;
     display: flex;
     align-items: center;
 }
 .bg2 .bx-controls-direction a {
-    /* position: absolute;  */
+    position: absolute; 
     transform: translateY(-50%); 
     display: block; 
     width: 40px; 
@@ -424,21 +580,30 @@ header div .list li {
     opacity: 0.9;
 }
 .bg2 .bx-controls-direction .bx-prev {
-    /* left: -75px;  */
+    left: 455px; 
     background: url(../images/main_arrow_left.png);
     display: flex;
+    position: absolute;
+    color: #343a4000;
+    bottom: -115px;
 }
 .bg2 .bx-controls-direction .bx-next {
-    right: 75px; 
+    right: 455px; 
     background: url(../images/main_arrow_right.png);
-    position: absolute;
-    right: 20px;
+    position: absolute;    
+    color: #343a4000;
+    bottom: -115px;
 }
 .bg2 .bx-pager {
-    width: 1280px; 
-    /* position: absolute;  */
-    bottom: 85px; 
-    text-align: center;
+    /* width: 1280px;  */
+    position: relative; 
+    bottom: -20px; 
+    left: -1px;
+    margin-bottom: 20px;
+}
+.bg2 .bx-pager .bx-default-pager {
+    position: absolute;
+    /* top: 5px; */
 }
 .bg2 .bx-pager div {
     display: inline-block; 
@@ -459,85 +624,8 @@ header div .list li {
     height: 8px; 
     border-radius: 4px;
 }
-.bg2 .viewport {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    height: 605px;
-    align-items: center;
-}
+
 /* .bg2 end */
-
-
-/* .g_ver05 */
-.g_ver05 {
-    background-color: #fff;
-    padding: 100px 0;
-}
-.g_ver05 .title {
-    text-align: center;
-    width: 1280px;
-    margin: 0 auto;
-    font-family: 'swagger';
-}
-.g_ver05 .title h3 {
-    font-size: 45px;
-    font-family: 'swagger';
-}
-.g_ver05 .title p {
-    font-size: 20px;
-    font-family: 'swagger';
-}
-.g_ver05 .cont {
-    width: 1280px;    
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-.g_ver05 .cont .items {
-    width: 49%;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 20px;    
-    /* align-items: flex-end; */
-    /* 한줄일 떄 수직정렬 : 가운데 */
-}
-.g_ver05 .cont .items figure {
-    width: 60%;
-    height: 500px;        
-}
-.g_ver05 .cont .items figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    
-}
-.g_ver05 .cont .items .info {
-    width: 40%;
-    padding-left: 20px;
-    display: block;
-    box-sizing: border-box;
-    /* width 값이 피겨와 인포 합치면 100%이기 때문에,
-    내부여백 잡을때 여백을 포함해서 가로값이 잡히도록
-    box-sizing: border-box 설정을 해주는 것! */
-}
-.g_ver05 .cont .items .info p {
-    font-size: 14px;
-    font-family: 'swagger';
-}
-.g_ver05 .cont .items .info h4 {
-    font-size: 30px;
-    font-family: 'swagger';
-}
-.g_ver05 .title em {
-    font-size: 13px;
-    text-align: right;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    display: block;
-    font-family: 'swagger';
-    margin-right: 10px;
-}
 
 /* .g_ver02 */
 .g_ver02 {    
@@ -555,10 +643,12 @@ header div .list li {
 .g_ver02 .title h3 {
     font-size: 45px;
     font-family: 'swagger';
+    letter-spacing : 2px;
 }
 .g_ver02 .title p {
     font-size: 20px;
     font-family: 'swagger';
+    letter-spacing : 1px;
 }
 .g_ver02 .title em {
     font-size: 13px;
@@ -578,7 +668,7 @@ header div .list li {
 }
 .g_ver02 .cont .items {
     width: 40%;
-    background-color: #fff;
+    background-color: rgba(102, 102, 102, 0.644);
     padding: 20px;
     font-family: 'swagger';
 }
@@ -597,13 +687,15 @@ header div .list li {
     padding: 20px;
 }
 .g_ver02 .cont .items .info p {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 15px;
     font-family: 'swagger';
+    letter-spacing : 1px;
 }
 .g_ver02 .cont .items .info h4 {
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'swagger';
+    letter-spacing : 1px;
 }
 .g_ver02 .cont .items:hover figure img {
     transform: scale(1.5);
@@ -612,8 +704,21 @@ header div .list li {
 /* .about */
 .about {
     padding: 80px;
-    background-color: #7952B3;
-    
+    background-color: #7952B3;    
+}
+.about .title {
+    text-align: center;
+    color: #E1E8EB;
+    width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-family: 'swagger';
+}
+.about .title h4 {
+    /* width: 100%; */
+    font-size: 45px;    
+    text-align: center;
+    letter-spacing : 2px;
 }
 .about .cont {
     width: 1280px;
@@ -622,6 +727,8 @@ header div .list li {
     align-items: center;
     justify-content: space-between;
     background-color: #FFC107;
+    box-shadow: 2px 2px 2px rgba(31, 30, 30, 0.274);
+    margin-bottom: 30px;
 }
 .about .cont figure {
     width: 30%;
@@ -636,7 +743,7 @@ header div .list li {
     width: 60%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between;    
 }
 .about .cont .info div {
     width: 45%;    
@@ -647,21 +754,25 @@ header div .list li {
     font-size: 40px;
     margin-bottom: 20px;
     font-family: 'swagger';
+    letter-spacing : 2px;
 }
 .about .cont .info div dd {
     font-size: 25px;
     font-family: 'swagger';
+    letter-spacing : 1px;
 }
 .about .cont .info div dt {
     font-weight: bold;
     font-size: 30px;
     margin-bottom: 5px;
     font-family: 'swagger';
+    letter-spacing : 1px;
 }
 .about .cont .info div p {
     font-size: 27px;
     margin-bottom: 5px;
     font-family: 'swagger';
+    letter-spacing : 1px;
 }
 
 footer {
@@ -680,8 +791,9 @@ footer ul li {
     border: 3px solid #E1E8EB;
     border-radius: 50px;
     margin: 10px auto;
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'swagger';
+    /* letter-spacing : 1px; */
 }
 footer ul li a {
     color: #E1E8EB;
@@ -696,10 +808,15 @@ footer ul li:first-child a {
     color: #343A40;    
 }
 footer h3 {
+    margin-bottom: 20px;
     font-size: 35px;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
+}
+footer h3 a {
+    color: #E1E8EB;   
     font-family: 'swagger';
+    letter-spacing : 4px;
 }
 footer p {
     margin-top: 20px;
@@ -707,6 +824,7 @@ footer p {
     color: #E1E8EB;
     font-family: 'swagger';
     margin-bottom: 20px;
+    /* letter-spacing : 1px; */
 }
 
 /* 반응형 제작 */
@@ -723,13 +841,19 @@ footer p {
     }    
     .main_visual .title {width: 100%;}
     .best_v .cont {width: 100%;}
+    .video .video_cont .list_cont {width: 100%;}
     .motion .motion_cont .list_cont {width: 100%;}
-    .bg2 .bxslider {width: 100%;}
+    .bg2 .div1 {width: 100%;}   
     .bg2 .slider_box {width: 100%;}
+    .bg2 .bx-wrapper {width: 100%;}
+    .bg2 .bx-viewport {width: 100%;}
+    .bg2 .bx-controls-direction {width: 100%;}           
+    /* .bg2 .bx-controls-direction a {width: 100%;}    */
     .g_ver05 .cont {width: 100%;}
     .g_ver05 .title {width: 100%;}
     .g_ver02 .cont {width: 100%;}
     .g_ver02 .title {width: 100%;}
+    .about .title {width: 100%}    
     .about .cont {width: 100%;}
 } /* 해상도 1280px 이하 */
 
@@ -738,24 +862,23 @@ footer p {
         height: auto; 
         line-height: 1.5;
         position: relative;
+        position: fixed;
     }
     header div {
         flex-wrap: wrap;
     }
     header div h1 a {
-        font-size: 35px;
-        margin-left: 10px;       
+        font-size: 35px;             
     }
     header div .list {
         font-size: 10px;
-        padding: 10px;
-        /* height: 30px; */
+        padding: 10px;        
         line-height: 28px;
-        justify-content: space-between;               
+        justify-content: space-between;                       
     }
     header div .list li {
-        padding: 0 20px;
-        margin: 0 10px;
+        padding: 0px 20px;
+        margin: 5px 30px;
     }
     header div > a {
         /* ' > ' 들어가면 */
@@ -787,6 +910,20 @@ footer p {
     .best_v .cont .info p:nth-of-type(2) {
         margin: 10px 0 20px;
     }
+    .video .list {
+        flex-wrap: wrap;
+    }
+    .video .list li {
+        margin-bottom: 10px;
+    }
+    .video .video_cont .list_cont.on {
+        flex-wrap: wrap;
+    }
+    .video .video_cont .list_cont .items {
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
     .motion .list {
         flex-wrap: wrap;
     }
@@ -800,7 +937,34 @@ footer p {
         width: 95%;
         margin: 0 auto;
         margin-bottom: 20px;
+    }    
+    .bg2 .bxslider {
+        /* width: 100% !important; */
+        /* overflow: hidden; */
+        /* flex-wrap: wrap; */
+        height: 100%;
     }
+    /* .bg2 .bx-controls-direction a {
+        width: 95%;
+    } */
+    .bg2 .slider_box a {
+        margin: 0 -20px !important;
+    }
+    .bg2 .bx-controls {
+        margin-top: 20px !important;
+    }
+    .bg2 .bx-controls-direction .bx-prev {
+        left: 180px !important;
+    }
+    .bg2 .bx-controls-direction .bx-next {
+        right: 200px !important;
+    }
+    .bg2 .slider_box img {
+        width: 100%;
+    }
+    .bg2 .slider_box a {
+        width: 100%;
+    }    
     .g_ver05 .cont {
         flex-wrap: wrap;        
     }
@@ -808,7 +972,7 @@ footer p {
         width: 95%;
         margin: 0 auto;
         margin-bottom: 20px;
-    }
+    }     
     .g_ver02 .cont {
         flex-wrap: wrap;        
     }
@@ -816,7 +980,11 @@ footer p {
         width: 50%;
         margin: 0 auto;
         margin-bottom: 20px;
+        flex-wrap: wrap;
     }    
+    .about .title h4 {
+        width: 30%;
+    }
     .about .cont {        
         flex-wrap: wrap;        
         justify-content: space-between;                     
@@ -851,12 +1019,41 @@ footer p {
     }
     section .info h4 {
         font-size: 22px !important;
+    }   
+    header div h1 a {
+        font-size: 30px !important;
     }
+    header div > a {
+    margin-right: 13px;
+    }    
+    header div .list {        
+        padding: 7px;        
+        line-height: 20px;
+        justify-content: space-between;                       
+    }
+    header div .list li {
+        padding: 0px 10px;
+        margin: 2px 0px;
+    }
+    header div .list li a {
+        font-size: 20px !important;
+    }  
     .main_visual .title h2 {
         font-size: 85px !important;
     }
     .main_visual .title p {
         font-size: 25px !important;
+    }
+    .video .list_cont .items .info {
+        padding: 15px;
+    }
+    .video .list_cont .items .info dl dt {
+        width: 30%;
+    }
+    .video .list_cont .items .info dl dd {
+        width: 70%;
+        word-break: break-all;
+        /* '글자별' 줄바꿈 해주기 */
     }
     .motion .list_cont .items .info {
         padding: 15px;
@@ -872,9 +1069,37 @@ footer p {
     .g_ver05 .cont .items figure {
         height: 300px;
     }
+    .bg2 .slider_box img {
+        width: 90%;
+    }
+    .bg2 .slider_box a {
+        width: 90%;
+        margin: 0 -2px !important;
+    }
+    .bg2 .slider_txt {
+        left: -15px;
+    }
+    .bg2 .bx-pager {
+        bottom: -50px;
+    }
+    .bg2 .bx-controls {
+        margin-top: -130px !important;
+    }
+    .bg2 .bx-controls-direction .bx-prev {
+        left: 40px !important;
+        bottom: -147px;
+    }
+    .bg2 .bx-controls-direction .bx-next {
+        right: 40px !important;
+        bottom: -147px;
+    }   
     .g_ver02 .cont .items figure {
         height: 300px;
     }
+    .about .title h4 {
+        width: 30%;
+        font-size: 30px !important;
+    }     
     .about .cont .info {
         margin: 0 auto;
         padding: 20px;
