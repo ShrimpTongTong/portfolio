@@ -8,14 +8,18 @@
     <title>leeheonseong Portfolio</title>
     <!-- CSS 연결 -->
     <link href="css/main.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="../portfolio/css/normalize.css"> -->
-    <link rel="stylesheet" href="../portfolio/css/fullpage.min.css">
-    <!-- jquery -->
+      <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
      <!-- 제이쿼리 js -->
      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
      <!-- Jquary 메뉴 고정해서 이동 -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+      <!-- FancyBox css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FancyBox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
         $(function(){
             $('header div .list li').click(function(){
@@ -38,39 +42,8 @@
             }); //click end
         });
     </script>
-    <!-- FancyBox css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- FancyBox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../portfolio/js/jquery-3.6.0.min.js"></script>
-    <script src="../portfolio/js/fullpage.min.js"></script>
-    <script src="../portfolio/js/jquery.bxslider.min.js"></script>
-    <script>
-        /*fullpage 스크립트 + 앵커 스크립트*/
-        $(document).ready(function () {
-            $("#fullpage").fullpage({
-                anchors: ["best", "video", "motion", "paint", "contact"],
-                menu: "#topMenu",
-                //navigation: true,
-                //scrollBar: true,
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $('.bxslider').bxSlider({
-                auto: true,
-                minSlides: 1,
-                maxSlides: 3,
-                moveSlides: 1,
-                slideWidth: 380,
-                touchEnabled: (navigator.maxTouchPoints > 0) 
-                //bxslider 내부의 a 링크 활성화
-            });
-        });
-    </script>
-    
-    <script>
+   
+        <script>
         $(function(){
             // jquary에서는 '//' 이 주석
             // 탭메뉴 만들기 (클릭하면 작동)
@@ -83,34 +56,53 @@
             }); //click end            
         });    
     </script>
-     <script>
-        $(document).ready(function () {
-            $('.bxslider').bxSlider({
-                minSlides: 1,
-                maxSlides: 3,
-                moveSlides: 1,
-                slideWidth: 380,
-                touchEnabled: (navigator.maxTouchPoints > 0) 
-                //bxslider 내부의 a 링크 활성화
+   
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Initialize Swiper -->
+    <script>
+        $(function(){
+            var swiper = new Swiper(".bg2", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                // Responsive breakpoints 반응형 옵션 넣기
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 50,
+                    },
+                },
+                },
             });
         });
-    </script>   
-
-
-    <!-- FancyBox css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- FancyBox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    </script>
    
 </head>
 <body>
 <!-- best video motion paint contact -->
-
+    <div class="topmenu">
+        <p>TopMenu</p>
+    </div>
     <header>
         <div>
             <h1>
-                <a href="#">leeheonseong</a>
+                <a href="https://www.youtube.com/channel/UCoP7OWmPsGyevWCqVpipvhw">leeheonseong</a>
             </h1>
             <ul class="list">
                 <li class="on"><a href="#best">BEST</a></li>
@@ -133,7 +125,7 @@
             <div class="title">
                 <h2>MULTI GRAPHIC DESIGNER</h2>
                 <p>lee heon seong</p>
-                <a href="#">유튜브채널</a>
+                <a href="https://www.youtube.com/channel/UCoP7OWmPsGyevWCqVpipvhw">유튜브채널</a>
             </div> <!-- .title end -->
     </section> <!-- .main_visual end -->
     <section class="best_v" id="best">
@@ -147,7 +139,7 @@
             <div class="youtube">
                 <div class="youtube_in">
                     <!-- 유튜브 연결 -->
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IDD5_z3kKCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VEFEUpsSBIM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div> <!-- .youtube_in -->
             </div> <!-- .youtube end -->
             <div class="info">
@@ -187,8 +179,8 @@
             <p>비디오, 애니메이션 기술을 이용한 영상제작</p>
         </div><!-- .title end -->
         <ul class="list">
-            <li class="on">촬영/편집</li>
-            <li>게임</li>
+            <li class="on">종합편집</li>
+            <li>홍보영상</li>
             <li>인포그래픽</li>
             <li>V-LOG</li>
             <li>영화 타이틀시퀀스</li>
@@ -198,56 +190,56 @@
                 <div class="items">
                     <div class="youtube">
                         <div class="youtube_in">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yxsU-bvDfN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/I6MqMBu8hs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <!-- 유튜브에서 공유 → 퍼가기 눌러서 아이프레임 태그 가지고 와야함 -->
                         </div> <!-- .youtube_in end -->
                     </div> <!-- .youtube end -->
                     <div class="info">
-                        <p> 스토리보드, 연출, 촬영, 편집, 보정, 특수효과</p>
-                        <h4>Canon 브랜드 광고컨셉 영상제작</h4>
+                        <p> 기획, 촬영, 연출 편집, 보정</p>
+                        <h4>신혼부부 결혼 스토리 소개</h4>
                         <dl>
                             <dt>프로그램</dt>
-                            <dd>Adobe After Effect, illustrator</dd>
+                            <dd>Adobe Premiere, illustrator</dd>
                         </dl>
                         <dl>
                             <dt>러닝타임</dt>
-                            <dd>00:08:03</dd>
+                            <dd>00:05:13</dd>
                         </dl>
                         <dl>
                             <dt>BGM</dt>
-                            <dd>Colyplay - fix you</dd>
+                            <dd> 영화 어바웃 타임 - Gold In Them Hills<br/>하울 앤 제이 - 사랑인가요</dd>
                         </dl>
                         <dl>
                             <dt>URL주소</dt>
-                            <dd><a href="https://www.youtube.com/watch?v=yxsU-bvDfN8">영상보기</a></dd>
+                            <dd><a href="https://www.youtube.com/watch?v=I6MqMBu8hs4">영상보기</a></dd>
                         </dl>
                     </div> <!-- .info end -->
                 </div> <!-- .itmes end 1 -->
                 <div class="items">
                     <div class="youtube">
                         <div class="youtube_in">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/aCcicY_lm24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/uc0RutXOfiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <!-- 유튜브에서 공유 → 퍼가기 눌러서 아이프레임 태그 가지고 와야함 -->
                         </div> <!-- .youtube_in end -->
                     </div> <!-- .youtube end -->
                     <div class="info">
                         <p> 스토리보드, 연출, 촬영, 편집, 보정, 특수효과</p>
-                        <h4>핸드드립 영상제작</h4>
+                        <h4>부산 사람의 해운대 나들이</h4>
                         <dl>
                             <dt>프로그램</dt>
-                            <dd>Adobe After Effect, Photoshop, illustrator</dd>
+                            <dd>Adobe Premiere, After Effect, Photoshop</dd>
                         </dl>
                         <dl>
                             <dt>러닝타임</dt>
-                            <dd>00:11:56</dd>
+                            <dd>00:03:19</dd>
                         </dl>
                         <dl>
                             <dt>BGM</dt>
-                            <dd>Colyplay - fix you</dd>
+                            <dd>Arc North - Symphony</dd>
                         </dl>
                         <dl>
                             <dt>URL주소</dt>
-                            <dd><a href="https://www.youtube.com/watch?v=aCcicY_lm24">영상보기</a></dd>
+                            <dd><a href="https://www.youtube.com/watch?v=uc0RutXOfiI&t=2s">영상보기</a></dd>
                         </dl>
                     </div> <!-- .info end -->
                 </div> <!-- .itmes end 2 -->
@@ -446,51 +438,50 @@
         </div> <!-- .motion_cont end -->
     </section> <!-- .motion end -->
 
-    <div class="bg2" data-anchor="paint">
-        <div class="div1" id="#">   
-            <div class="title">
+    <div class="swiper bg2">                   
+            <div class="title" id="#">
                 <h3>ILLUSTRATION</h3>
                 <p>디자인 툴을 이용한 그래픽디자인</p>
             </div>
-            <div class="bxslider">
-                <div class="slider_box">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
                     <a href="http://youtube.com">                       
                             <img src="../portfolio/images/port01.jpg" alt="">                       
                     </a>
-                    <div class="slider_txt">
-                        <p>PUBLISHING</p>
+                    <div class="swiper_txt">
                         <h3>Paint #01</h3>
+                        <p>PUBLISHING</p>                        
                     </div>
                 </div>
-                <div class="slider_box">
+                <div class="swiper-slide">
                     <a href="#">                        
                             <img src="../portfolio/images/port02.jpg" alt="">                        
                     </a>
-                    <div class="slider_txt">
-                        <p>PUBLISHING</p>
+                    <div class="swiper_txt">
                         <h3>Paint #02</h3>
+                        <p>PUBLISHING</p>                      
                     </div>
                 </div>
-                <div class="slider_box">
+                <div class="swiper-slide">
                     <a href="#">                        
                             <img src="../portfolio/images/port03.jpg" alt="">                        
                     </a>
-                    <div class="slider_txt">
-                        <p>PUBLISHING</p>
+                    <div class="swiper_txt">
                         <h3>Paint #03</h3>
+                        <p>PUBLISHING</p>                        
                     </div>
                 </div>
-                <div class="slider_box">
+                <div class="swiper-slide">
                     <a href="#">                        
                             <img src="../portfolio/images/port04.jpg" alt="">                        
                     </a>
-                    <div class="slider_txt">
-                        <p>PUBLISHING</p>
+                    <div class="swiper_txt">
                         <h3>Paint #04</h3>
+                        <p>PUBLISHING</p>                       
                     </div>
                 </div>                
             </div>
-        </div>
+            <div class="swiper-pagination"></div>                  
     </div> <!-- .bg2 end -->
 
 
@@ -591,11 +582,13 @@
     <footer>
         <h3 class="foot"><a href="#topmenu">leeheonseong</a></h3>
         <ul>
-            <li><a href="#">유튜브채널</a></li>
+            <li><a href="https://www.youtube.com/channel/UCoP7OWmPsGyevWCqVpipvhw">유튜브채널</a></li>
             <li><a href="tel:010-2961-3078">010.2961.3078</a></li>
             <li>kalhs98989@naver.com</li>
         </ul>
         <p>copyright 2022. Visual Creater leeheonseong all right reserved.<br />본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다. 사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝힙니다.</p>
     </footer>
+
+
 </body>
 </html>

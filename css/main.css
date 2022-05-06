@@ -20,7 +20,13 @@ html, body {
     background-color: #343a40;   
 }
 
-
+.topmenu {
+    position: fixed;
+    z-index: 1;
+    color: #E1E8EB;
+    font-family: 'swagger';
+    font-size: 15px;
+}
 /* header */
 header {
     height: 80px;
@@ -500,129 +506,65 @@ header div .list li {
 /* .motion end */
 
 /* .bg2 */
-.bg2 .div1 {
-    width: 100%;  
-    /* background-color: #fff; */
-    padding: 100px 0;
-    text-align: center;       
-}
 .bg2 .title {
-    margin-bottom: 45px;
-}
-.bg2 .title h3 {    
-    color:#E1E8EB;
-    font-size: 45px;
+    text-align: center;
+    margin-bottom: 40px;
     font-family: 'swagger';
-    letter-spacing : 2px;        
+    color: #E1E8EB;  
+}
+.bg2 .title h3 {
+font-size: 45px;    
+font-family: 'swagger';
+letter-spacing : 2px;
 }
 .bg2 .title p {
-    font-size: 20px;
-    color:#E1E8EB;
-    font-family: 'swagger';
-    letter-spacing : 1px;    
+font-size: 20px;
+font-family: 'swagger';
 }
-.bg2 .bx-wrapper {
-    margin: 0 auto;  
-    max-width: 1280px !important;
+.bg2 .swiper-wrapper {
+    margin-bottom: 40px;
 }
-.bg2 .slider_box {    
-    height: 605px;
-    margin: 0 20px;    
-}
-.bg2 .slider_box a {
-    display: block;
-    width: 100px;
-}
-.bg2 .slider_box img {  
-    object-fit: cover;
-    margin: 0 10px;
+.swiper {
+    width: 100%;
     height: 100%;
-    transition: 0.8s;    
 }
-.bg2 .slider_txt {
-    position: relative;
-    left: 10px;
-}
-.bg2 .slider_box .slider_txt p {
-    font-size: 15px;
-    padding-top: 5px;
-    color:#E1E8EB;
-    font-family: 'swagger';
-    letter-spacing : 1px; 
-}    
-.bg2 .slider_box .slider_txt h3 {
-    font-size: 35px; 
-    margin-top: 8px;
-    color:#E1E8EB;
-    font-family: 'swagger';
-    letter-spacing : 2px; 
-}
-.bg2 .bx-controls {
-    margin-top: 10px;
-}    
-.bg2 .bx-controls-direction {
-    position: absolute; 
-    /* top: 50%;  */
-    width: 1280px;
-    display: flex;
+.swiper-slide {
+    text-align: center;    
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: block;
+    width: none !important;
+    /* display: flex; */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
 }
-.bg2 .bx-controls-direction a {
-    position: absolute; 
-    transform: translateY(-50%); 
-    display: block; 
-    width: 40px; 
-    height: 76px; 
-    text-indent: 5px; 
-    opacity: 0.4; 
-    transition: all .3s;}
-.bg2 .bx-controls-direction a:hover {
-    opacity: 0.9;
+.swiper-slide a {
+    display: inline-block;
 }
-.bg2 .bx-controls-direction .bx-prev {
-    left: 455px; 
-    background: url(../images/main_arrow_left.png);
-    display: flex;
-    position: absolute;
-    color: #343a4000;
-    bottom: -115px;
+.swiper-slide img {    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.bg2 .bx-controls-direction .bx-next {
-    right: 455px; 
-    background: url(../images/main_arrow_right.png);
-    position: absolute;    
-    color: #343a4000;
-    bottom: -115px;
+.bg2 .swiper-slide .swiper_txt {
+    font-family: 'swagger';
+    position: relative;    
+    bottom: 10px;
 }
-.bg2 .bx-pager {
-    /* width: 1280px;  */
-    position: relative; 
-    bottom: -20px; 
-    left: -1px;
-    margin-bottom: 20px;
+.bg2 .swiper-slide .swiper_txt h3 {
+    font-size: 30px;
 }
-.bg2 .bx-pager .bx-default-pager {
-    position: absolute;
-    /* top: 5px; */
-}
-.bg2 .bx-pager div {
-    display: inline-block; 
-    margin: 0 5px;
-}
-.bg2 .bx-pager div a {
-    display: block; 
-    width: 8px; 
-    height: 8px; 
-    background-color: #ddd; 
-    font-size: 0; 
-    border-radius: 50%; 
-    transition: all .3s;
-}
-.bg2 .bx-pager div a.active {
-    background-color: #FFC107;
-    width: 42px; 
-    height: 8px; 
-    border-radius: 4px;
+.bg2 .swiper-slide .swiper_txt p {
+    font-size: 20px;
 }
 
 /* .bg2 end */
